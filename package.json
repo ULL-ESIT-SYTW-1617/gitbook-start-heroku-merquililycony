@@ -1,0 +1,19 @@
+{
+  "name": "gitbook-start-heroku-merquililycony",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-heroku-merquililycony.git"
+  },
+  "author": "Merquis Cruz, Constanza León, E. Liliana Camacho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-heroku-merquililycony/issues"
+  },
+  "homepage": "https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-heroku-merquililycony#readme"
+}
