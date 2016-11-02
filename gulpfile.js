@@ -18,7 +18,12 @@ gulp.task('install-resource', function()
     gulp.src(['./package.json']).pipe(install());
 });
 
+// Despliegue en Heroku
 
+gulp.task('push-heroku', function(){
+    git()
+        .push('heroku','master');
+)};
 //Deploy
 gulp.task('deploy', ['install-resource', 'push'], function()
 {
