@@ -1,11 +1,18 @@
 # Práctica 4: Nueva funcionalidad para el paquete npm
-## Paquete: gitbook-start-heroku-ull-es.merquililycony
+## Paquete: gitbook-start-herokuls-ull-es-merquililycony
 
 
 # Objetivo:
 *El objetivo de esta práctica es extender el package NodeJS publicado en npm en una práctica anterior con una nueva*
 *funcionalidad que permita que los usuarios realizar un despliegue automatico en el servidor de IAAS*
 
+##Instalación:
+
+~~~
+    $ npm install -g gitbook-start-heroku-merquililycony
+~~~
+
+##Funcionamiento
 
 
 ## Enlaces :

@@ -24,7 +24,7 @@ var push_heroku = function (){
     gulp.task('push-heroku', function(){
     git()
         .push('heroku','master');
-    )};
+    });
   }
 //Deploy
 gulp.task('deploy', ['install-resource', 'push'], function()
