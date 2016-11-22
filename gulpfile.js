@@ -3,6 +3,9 @@ var shell = require('gulp-shell');
 var install = require('gulp-install');
 var git = require('simple-git');
 
+
+
+
 // Repositorio Github
 gulp.task('push', function(){
     git()
@@ -34,6 +37,7 @@ gulp.task('deploy', ['install-resource', 'push'], function()
             'npm publish'
            ]))
 });
+
 
 
 
