@@ -8,6 +8,9 @@ var gulp = require(path.join(__dirname,'/', 'gulpfile.js'));
 var deasync = require('deasync');
 var cp = require('child_process');
 var exec = deasync(cp.exec);
+var Curl = require( 'node-libcurl' ).Curl;
+var curl = new Curl();
+
 //var findup = require('findup-sync');
 //var objects = require('./objects');
 
@@ -19,8 +22,31 @@ var id_;
 var pass = readlineSync.question('Introduzca contraseña de github: ');
 var ghuser;
 
-console.log(exec('ls -la'));
+//console.log(exec('ls -la'));
+var w;
+var mifuncion = function(){
+   console.log(exec('ls -la'));
+  //return w;
 
+// exec('ls -la');
+  // var p = '-i';
+  // curl()
+};
+//exports.start = w;
+mifuncion();
+// var curl = new Curl(),
+//     close = curl.close.bind( curl );
+
+// curl.setOpt( curl.option.URL, 'https://api.github.com/authorizations' );
+// curl.setOpt()
+// curl.setOpt( curl.option.HTTPPOST, [
+//     {"scopes": ["repo", "user"], "note":"mytoken"}
+// ]);
+
+// curl.on( 'end', close );
+// curl.on( 'error', close );
+// var d =  '{"scopes": ["repo", "user"], "note":"mytoken"}';
+// console.log(exec('curl -i -u ALU0100673647 -d d https://api.github.com/authorizations'));
 //function tok(usuario){
 
 //console.log(exec('ls -la'));
@@ -34,6 +60,8 @@ console.log(exec('ls -la'));
 //COGER TOKEN
   var json = JSON.parse(fs.readFileSync('mitoken.json','utf8'))
   var token = json.token;
+  
+  
   console.log("MI TOKEN");
   console.log(token);
 
