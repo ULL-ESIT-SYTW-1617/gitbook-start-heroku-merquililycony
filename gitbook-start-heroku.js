@@ -8,7 +8,7 @@ var gulp = require(path.join(__dirname,'/', 'gulpfile.js'));
 var deasync = require('deasync');
 var cp = require('child_process');
 var exec = deasync(cp.exec);
-var Curl = require( 'node-libcurl' ).Curl;
+var Curl = require('node-libcurl').Curl;
 var curl = new Curl();
 
 //var findup = require('findup-sync');
@@ -23,33 +23,30 @@ var pass = readlineSync.question('Introduzca contraseña de github: ');
 var ghuser;
 
 //console.log(exec('ls -la'));
-var w;
+var i,u,d,di;
+var dir = 'http://www.netscape.com/index.html';
 var mifuncion = function(){
-   console.log(exec('ls -la'));
-  //return w;
+      //var args = " -d '{'title': 'Test' }' -H 'Content-Type: application/json' http://125.196.19.210:3030/widgets/test";
 
-// exec('ls -la');
-  // var p = '-i';
-  // curl()
+  var args = " -i -u ALU0100673647 -d ";
+ // var args1 = ''{"scopes": ["repo", "user"], "note":"mytoken"}'' ;
+  var args2 = " https://api.github.com/authorizations >> e.json";
+  var general = args + "'"+ '{"scopes": ["repo", "user"], "note":"etoken"}'+ "'" + args2;
+console.log('curl'+ general);
+//console.log(args);
+//exec('curl'+general);
+    exec('curl ' + general, function (error, stdout, stderr) {
+      console.log('stdout: ' + stdout);
+      console.log('stderr: ' + stderr);
+      if (error !== null) {
+        console.log('exec error: ' + error);
+      }
+    });
+    console.log("fin exec");
 };
 //exports.start = w;
 mifuncion();
-// var curl = new Curl(),
-//     close = curl.close.bind( curl );
 
-// curl.setOpt( curl.option.URL, 'https://api.github.com/authorizations' );
-// curl.setOpt()
-// curl.setOpt( curl.option.HTTPPOST, [
-//     {"scopes": ["repo", "user"], "note":"mytoken"}
-// ]);
-
-// curl.on( 'end', close );
-// curl.on( 'error', close );
-// var d =  '{"scopes": ["repo", "user"], "note":"mytoken"}';
-// console.log(exec('curl -i -u ALU0100673647 -d d https://api.github.com/authorizations'));
-//function tok(usuario){
-
-//console.log(exec('ls -la'));
 // curl -i -u usuario -d '{"scopes": ["repo", "user"], "note":"mytoken"}' https://api.github.com/authorizations >> mytoken.json
 
 //}
