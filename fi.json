@@ -1,0 +1,46 @@
+HTTP/1.1 201 Created
+Server: GitHub.com
+Date: Tue, 22 Nov 2016 19:49:53 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 588
+Status: 201 Created
+X-RateLimit-Limit: 5000
+X-RateLimit-Remaining: 4990
+X-RateLimit-Reset: 1479844404
+Cache-Control: private, max-age=60, s-maxage=60
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP
+ETag: "ee398e319038afdf8b89f6a366e6f1ab"
+Location: https://api.github.com/authorizations/64689334
+X-GitHub-Media-Type: github.v3
+Access-Control-Expose-Headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src 'none'
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+Vary: Accept-Encoding
+X-Served-By: 065b43cd9674091fec48a221b420fbb3
+X-GitHub-Request-Id: 68C736EB:5896:1121DD06:5834A161
+
+{
+  "id": 64689334,
+  "url": "https://api.github.com/authorizations/64689334",
+  "app": {
+    "name": "fitoken",
+    "url": "https://developer.github.com/v3/oauth_authorizations/",
+    "client_id": "00000000000000000000"
+  },
+  "token": "5cda054ef97114e213b6dbaee6029af9c16c43b2",
+  "hashed_token": "81760c70557b8eb7f06fa24e2b33721b2598f4664c4746cf8640007b6106399b",
+  "token_last_eight": "c16c43b2",
+  "note": "fitoken",
+  "note_url": null,
+  "created_at": "2016-11-22T19:49:53Z",
+  "updated_at": "2016-11-22T19:49:53Z",
+  "scopes": [
+    "repo",
+    "user"
+  ],
+  "fingerprint": null
+}
