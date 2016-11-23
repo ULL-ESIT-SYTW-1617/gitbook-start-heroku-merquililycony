@@ -21,11 +21,9 @@ var mifuncion = function(){
   var args = " -i -u "+usuario+" -d ";
   var args1 = '\'{"scopes": ["repo", "user"], "note":"mlc"}\'';
   var args2 = " https://api.github.com/authorizations >> mlc.json";
-  var general = args + args1 + args2;
-  console.log('curl'+ general);
+  var crear_token = args + args1 + args2;
 
-
-  exec('curl ' + general, function (error, stdout, stderr) {
+  exec('curl ' + crear_token, function (error, stdout, stderr) {
     console.log('stdout: ' + stdout);
     console.log('stderr: ' + stderr);
     if (error !== null) {
@@ -40,12 +38,10 @@ mifuncion();
 
 
 //COGER TOKEN
-var json = JSON.parse(fs.readFileSync('mitoken.json','utf8'))
-var token = json.token;
-
-
-console.log("MI TOKEN");
-console.log(token);
+//var json = JSON.parse(fs.readFileSync('mitoken.json','utf8'))
+//var token = json.token;
+//console.log("MI TOKEN");
+//console.log(token);
 
 client.get('/users/'+usuario, {}, function (err, status, body, headers) {
 
