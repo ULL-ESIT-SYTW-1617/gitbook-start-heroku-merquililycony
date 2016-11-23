@@ -6,8 +6,7 @@ var fs = require('fs');
 var path = require('path');
 var gulp = require(path.join(__dirname,'/', 'gulpfile.js'));
 var deasync = require('deasync');
-var cp = require('child_process');
-var exec = deasync(cp.exec);
+const child_process = require('child_process');
 var Curl = require('node-libcurl').Curl;
 var curl = new Curl();
 
@@ -25,14 +24,26 @@ var mifuncion = function(){
 
 
   console.log("Introduzca su contraseña de github: ")
-  exec('curl ' + crear_token, function (error, stdout, stderr) {
-    console.log('stdout: ' + stdout);
-    console.log('stderr: ' + stderr);
-    if (error !== null) {
-      console.log('exec error: ' + error);
-    }
-    exec('sed -i "1,25d" mlc.json');//elimina de la linea 1 a la 25
-  });
+
+
+     var workerProcess = child_process.exec('curl ' + crear_token,function
+        (error, stdout, stderr) {
+
+        if (error) {
+           console.log(error.stack);
+           console.log('Error code: '+error.code);
+           console.log('Signal received: '+error.signal);
+        }
+        console.log('stdout: ' + stdout);
+        console.log('stderr: ' + stderr);
+     });
+
+     workerProcess.on('exit', function (code) {
+        console.log('Child process exited with exit code '+code);
+     });
+
+
+
   console.log("fin exec");
 };
 //exports.start = w;
@@ -62,11 +73,6 @@ client.get('/users/'+usuario, {}, function (err, status, body, headers) {
   // console.log("HOLA: ", ghuser);
 });
 
-
-var client = github.client({
-  username: usuario,
-  password: pass
-});
 
 
 client.get('/user', {}, function (err, status, body, headers) {
