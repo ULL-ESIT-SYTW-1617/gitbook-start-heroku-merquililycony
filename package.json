@@ -35,6 +35,7 @@
   "homepage": "https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-heroku-merquililycony#readme",
   "dependencies": {
     "deasync": "^0.1.9",
+    "exec": "^0.2.1",
     "findup-sync": "^0.4.3",
     "fs-extra": "^0.30.0",
     "gulp": "^3.9.1",
