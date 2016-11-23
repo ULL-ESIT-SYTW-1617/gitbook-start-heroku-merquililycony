@@ -1,0 +1,21 @@
+{
+  "id": 65666874,
+  "url": "https://api.github.com/authorizations/65666874",
+  "app": {
+    "name": "mlc",
+    "url": "https://developer.github.com/v3/oauth_authorizations/",
+    "client_id": "00000000000000000000"
+  },
+  "token": "ca330f64a299ed8a0a8899b12f153b330c6f2100",
+  "hashed_token": "36ecad3f0c0000f8401c383cc0e2f226c99e140a763a86f452a683a18f583578",
+  "token_last_eight": "0c6f2100",
+  "note": "mlc",
+  "note_url": null,
+  "created_at": "2016-11-23T16:20:17Z",
+  "updated_at": "2016-11-23T16:20:17Z",
+  "scopes": [
+    "repo",
+    "user"
+  ],
+  "fingerprint": null
+}

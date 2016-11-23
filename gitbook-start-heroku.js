@@ -1,11 +1,9 @@
 var github = require('octonode');
 var client = github.client();
-const readline = require('readline');
 var readlineSync = require('readline-sync');
 var fs = require('fs');
 var path = require('path');
 var gulp = require(path.join(__dirname,'/', 'gulpfile.js'));
-var deasync = require('deasync');
 const child_process = require('child_process');
 var Curl = require('node-libcurl').Curl;
 var curl = new Curl();
