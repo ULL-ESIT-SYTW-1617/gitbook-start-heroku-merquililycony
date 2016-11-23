@@ -1,0 +1,168 @@
+HTTP/1.1 201 Created
+Server: GitHub.com
+Date: Tue, 22 Nov 2016 19:42:24 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 590
+Status: 201 Created
+X-RateLimit-Limit: 5000
+X-RateLimit-Remaining: 4991
+X-RateLimit-Reset: 1479844404
+Cache-Control: private, max-age=60, s-maxage=60
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP
+ETag: "dca5ea1ca9a3822e810621b7b531c736"
+Location: https://api.github.com/authorizations/64685678
+X-GitHub-Media-Type: github.v3
+Access-Control-Expose-Headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src 'none'
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+Vary: Accept-Encoding
+X-Served-By: 3e3b9690823fb031da84658eb58aa83b
+X-GitHub-Request-Id: 68C736EB:5893:E13E757:58349FA0
+
+{
+  "id": 64685678,
+  "url": "https://api.github.com/authorizations/64685678",
+  "app": {
+    "name": "fimtoken",
+    "url": "https://developer.github.com/v3/oauth_authorizations/",
+    "client_id": "00000000000000000000"
+  },
+  "token": "20b7b31d77d3ce896a901f48876b07fdbb394b87",
+  "hashed_token": "fde39b4f75e9b048f5e4224d36e17ae1d53b6390e399b65a2d927d71e555e175",
+  "token_last_eight": "bb394b87",
+  "note": "fimtoken",
+  "note_url": null,
+  "created_at": "2016-11-22T19:42:24Z",
+  "updated_at": "2016-11-22T19:42:24Z",
+  "scopes": [
+    "repo",
+    "user"
+  ],
+  "fingerprint": null
+}
+HTTP/1.1 401 Unauthorized
+Server: GitHub.com
+Date: Tue, 22 Nov 2016 19:45:02 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 93
+Status: 401 Unauthorized
+X-GitHub-Media-Type: github.v3
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 31
+X-RateLimit-Reset: 1479844404
+Access-Control-Expose-Headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src 'none'
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 68C736EB:5896:1120F538:5834A03E
+
+{
+  "message": "Bad credentials",
+  "documentation_url": "https://developer.github.com/v3"
+}
+HTTP/1.1 401 Unauthorized
+Server: GitHub.com
+Date: Tue, 22 Nov 2016 19:47:17 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 93
+Status: 401 Unauthorized
+X-GitHub-Media-Type: github.v3
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 30
+X-RateLimit-Reset: 1479844404
+Access-Control-Expose-Headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src 'none'
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 68C736EB:5894:3707002:5834A0C4
+
+{
+  "message": "Bad credentials",
+  "documentation_url": "https://developer.github.com/v3"
+}
+HTTP/1.1 401 Unauthorized
+Server: GitHub.com
+Date: Tue, 22 Nov 2016 19:47:49 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 93
+Status: 401 Unauthorized
+X-GitHub-Media-Type: github.v3
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 29
+X-RateLimit-Reset: 1479844404
+Access-Control-Expose-Headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src 'none'
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 68C736EB:5893:E14C8BE:5834A0E5
+
+{
+  "message": "Bad credentials",
+  "documentation_url": "https://developer.github.com/v3"
+}
+HTTP/1.1 401 Unauthorized
+Server: GitHub.com
+Date: Tue, 22 Nov 2016 19:49:07 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 93
+Status: 401 Unauthorized
+X-GitHub-Media-Type: github.v3
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 28
+X-RateLimit-Reset: 1479844404
+Access-Control-Expose-Headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src 'none'
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 68C736EB:5893:E150240:5834A132
+
+{
+  "message": "Bad credentials",
+  "documentation_url": "https://developer.github.com/v3"
+}
+HTTP/1.1 422 Unprocessable Entity
+Server: GitHub.com
+Date: Tue, 22 Nov 2016 19:52:23 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 269
+Status: 422 Unprocessable Entity
+X-RateLimit-Limit: 5000
+X-RateLimit-Remaining: 4989
+X-RateLimit-Reset: 1479844404
+X-GitHub-Media-Type: github.v3
+Access-Control-Expose-Headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src 'none'
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 68C736EB:5893:E1583E3:5834A1F7
+
+{
+  "message": "Validation Failed",
+  "errors": [
+    {
+      "resource": "OauthAccess",
+      "code": "already_exists",
+      "field": "description"
+    }
+  ],
+  "documentation_url": "https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization"
+}

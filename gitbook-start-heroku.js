@@ -15,6 +15,7 @@ var curl = new Curl();
 
 var usuario = readlineSync.question('Introduzca el USUARIO de github: ');
 
+
 var mifuncion = function(){
 
   //var args = " -i -u alu0100536690 -d ";
@@ -32,8 +33,42 @@ var mifuncion = function(){
     }
   });
   console.log("fin exec");
+
+var id_;
+//var pass = readlineSync.question('Introduzca contraseña de github: ');
+var ghuser;
+
+//console.log(exec('ls -la'));
+var i,u,d,di;
+var dir = 'http://www.netscape.com/index.html';
+var mifuncion = function(){
+      //var args = " -d '{'title': 'Test' }' -H 'Content-Type: application/json' http://125.196.19.210:3030/widgets/test";
+
+  var args = " -i -u ";
+  var ar = " -d ";
+ // var args1 = ''{"scopes": ["repo", "user"], "note":"mytoken"}'' ;
+ //var args = ["-i -u ALU0100673647 -d'", "-H 'Content-Type: application/json'", "http://125.196.19.210:3030/widgets/test"];
+
+  var args2 = " https://api.github.com/authorizations >> fim.json";
+  var general = args +usuario + ar + "'"+ '{"scopes": ["repo", "user"], "note":"fimtoken"}'+ "'" + args2;
+console.log('curl'+ general);
+console.log("password: ");
+
+//console.log(args);
+//exec('curl'+general);
+    exec('curl ' + general, function (error, stdout, stderr) {
+      console.log('stdout: ' + stdout);
+      //curl.close();
+      console.log('stderr: ' + stderr);
+      curl.close();
+      if (error !== null) {
+        console.log('exec error: ' + error);
+      }
+
+    });
+
 };
-//exports.start = w;
+
 mifuncion();
 
 
