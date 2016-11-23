@@ -36,9 +36,10 @@ var mifuncion = function(){
         }
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
-     });
+        child_process.exec('sed -i "1,25d" mlc.json');//elimina de la linea 1 a la 25
 
-     workerProcess.on('exit', function (code) {
+     });
+        workerProcess.on('exit', function (code) {
         console.log('Child process exited with exit code '+code);
      });
 
@@ -46,7 +47,7 @@ var mifuncion = function(){
 
   console.log("fin exec");
 };
-//exports.start = w;
+
 mifuncion();
 
 
