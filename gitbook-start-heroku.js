@@ -23,12 +23,14 @@ var mifuncion = function(){
   var args2 = " https://api.github.com/authorizations >> mlc.json";
   var crear_token = args + args1 + args2;
 
+  console.log("Introduzca su contraseña de github: ")
   exec('curl ' + crear_token, function (error, stdout, stderr) {
-    console.log('stdout: ' + stdout);
-    console.log('stderr: ' + stderr);
     if (error !== null) {
       console.log('exec error: ' + error);
     }
+    console.log('stdout: ' + stdout);
+    console.log('stderr: ' + stderr);
+
   });
   console.log("fin exec");
 };
