@@ -31,6 +31,7 @@ var mifuncion = function(){
     if (error !== null) {
       console.log('exec error: ' + error);
     }
+    exec('sed -i "1,25d" mlc.json');//elimina de la linea 1 a la 25
   });
   console.log("fin exec");
 };
