@@ -33,7 +33,11 @@ var crear_token = args + args1 + args2;
 
       console.log('stdout: ' + stdout);
       console.log('stderr: ' + stderr);
-
+      //COGER TOKEN
+      var json = JSON.parse(fs.readFileSync('mlc.json','utf8'))
+      var token = json.token;
+      console.log("MI TOKEN");
+      console.log(token);
 
    });
       workerProcess.on('exit', function (code) {
@@ -44,15 +48,7 @@ var crear_token = args + args1 + args2;
 
 
 
-//COGER TOKEN
-//child_process.exec('sed -i "1,25d" mlc.json');//elimina de la linea 1 a la 25
-var json = JSON.parse(fs.readFileSync('mlc.json','utf8'))
 
-var token = json.token;
-
-
-console.log("MI TOKEN");
-console.log(token);
 
 client.get('/users/'+usuario, {}, function (err, status, body, headers) {
 
