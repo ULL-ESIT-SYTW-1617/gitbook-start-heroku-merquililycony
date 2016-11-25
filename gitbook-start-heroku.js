@@ -15,7 +15,7 @@ var password = readlineSync.question('Introduzca la contraseña de github: ');
 
 
 //var args = " -i -u alu0100536690 -d ";
-var args = " -i -u "+usuario+":"+password+" -d ";
+var args = " -u "+usuario+":"+password+" -d ";
 var args1 = '\'{"scopes": ["repo", "user"], "note":"mlc"}\'';
 var args2 = " https://api.github.com/authorizations >> mlc.json";
 var crear_token = args + args1 + args2;
@@ -45,7 +45,7 @@ var crear_token = args + args1 + args2;
 
 
 //COGER TOKEN
-child_process.exec('sed -i "1,25d" mlc.json');//elimina de la linea 1 a la 25
+//child_process.exec('sed -i "1,25d" mlc.json');//elimina de la linea 1 a la 25
 var json = JSON.parse(fs.readFileSync('mlc.json','utf8'))
 
 var token = json.token;
