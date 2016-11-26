@@ -44,10 +44,18 @@ exec('curl ' + crear_token, function(error, stdout, stderr){
    console.log(repo_name);
   function pwd(){
 
+
   //  exec('pwd', function(error, stdout, stderr){
 
   //   repo_name = path.basename(stdout);
     //  console.log("Se ejecutó pwd: "+repo_name);
+
+    //CREAR REPOSITORIO REMOTO EN GITHUB CON EL TOKEN
+
+    //var pwd = child_process.exec('pwd');
+    //var repo_name = path.basename(pwd);
+    //console.log(repo_name);
+
 
  //-u 'alu0100536690:esperanza85' https://api.github.com/user/repos -d '{"name":"gitbook-start-heroku-merquililycony"}'
 
@@ -57,7 +65,7 @@ exec('curl ' + crear_token, function(error, stdout, stderr){
 
   //  });
     exec('curl' + " -u \'"+usuario+":"+password+"\' https://api.github.com/user/repos -d "+'\'{"name":"'+repo_name+'"}\'', function(error, stdout, stderr){
-    console.log("No se si se ejecuta"+ repo_name);
+    
     });
 
 }
