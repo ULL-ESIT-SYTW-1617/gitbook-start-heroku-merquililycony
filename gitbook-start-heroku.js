@@ -4,10 +4,7 @@ var readlineSync = require('readline-sync');
 var fs = require('fs');
 var path = require('path');
 var gulp = require(path.join(__dirname,'/', 'gulpfile.js'));
-const child_process = require('child_process');
-//var cp = require('child_process');
-//var deasync = require('deasync');
-//var exec = deasync(cp.exec);
+var exec = require('child_process').exec;
 var Curl = require('node-libcurl').Curl;
 var curl = new Curl();
 
@@ -22,52 +19,62 @@ var crear_token = args + args1 + args2;
 
 //TENEMOS QUE HACER UN CALLBACK, PROMESA O UTILIZAR LA LIBRERÍA Async y Await
 //PARA QUE NO CONTINUE HASTA QUE NO FINALICE LA FUNCIÓN
- var workerProcess = child_process.exec('curl ' + crear_token,function
-    (error, stdout, stderr) {
 
-    if (error) {
-       console.log(error.stack);
-       console.log('Error code: '+error.code);
-       console.log('Signal received: '+error.signal);
-    }
+
+
+exec('curl ' + crear_token, function(error, stdout, stderr){
+  if (error) {
+    console.log(error.stack);
+    console.log('Error code: '+error.code);
+    console.log('Signal received: '+error.signal);
+  }
 
   //  console.log('stdout: ' + stdout);
   //  console.log('stderr: ' + stderr);
-    //COGER TOKEN
-    var json = JSON.parse(fs.readFileSync(usuario+'.json','utf8'))
-    var token = json.token;
-    console.log("Token usuario: "+token);
+  //COGER TOKEN
+  var json = JSON.parse(fs.readFileSync(usuario+'.json','utf8'))
+  var token = json.token;
+  console.log("Token usuario: "+token);
 
-    //CREAR REPOSITORIO REMOTO EN GITHUB CON EL TOKEN
-    var repo_name = "tac-tac-tac";
-    //var pwd = child_process.exec('pwd');
-    //var repo_name = path.basename(pwd);
-    //console.log(repo_name);
+  //CREAR REPOSITORIO REMOTO EN GITHUB CON EL TOKEN
+  //var pwd = "Home/hola/mundo/pepito-perez"
+  var nrepo = require(path.join(__dirname,'/','package.json'))
+   var addrepo;
+   var repo_name = nrepo.nombre_dir;
+   console.log(repo_name);
+  function pwd(){
+
+  //  exec('pwd', function(error, stdout, stderr){
+
+  //   repo_name = path.basename(stdout);
+    //  console.log("Se ejecutó pwd: "+repo_name);
+
+ //-u 'alu0100536690:esperanza85' https://api.github.com/user/repos -d '{"name":"gitbook-start-heroku-merquililycony"}'
+
+      //addrepo = " -u \'"+usuario+":"+password+"\' https://api.github.com/user/repos -d "+'\'{"name":"'+repo_name+'"}\'';
+      //console.log("Se ejecutó repo_name: "+addrepo);
 
 
-    //console.log("EL DIRECTORIO ES"+repo_name);
+  //  });
+    exec('curl' + " -u \'"+usuario+":"+password+"\' https://api.github.com/user/repos -d "+'\'{"name":"'+repo_name+'"}\'', function(error, stdout, stderr){
+    console.log("No se si se ejecuta"+ repo_name);
+    });
 
-    //curl -u 'usuario:token' https://api.github.com/user/repos -d '{"name":"nombre_repo"}'
-    var addrepo = " -u \'"+usuario+":"+token+"\' https://api.github.com/user/repos -d "+'\'{"name":"'+repo_name+'"}\'';
-    child_process.exec('curl ' + addrepo);
+}
+pwd();
 
 
- });
-
-    workerProcess.on('exit', function (code) {
-    //console.log('Child process exited with exit code '+code);
-
- });
+});
 
 
 
 //UTILIZANDO LA LIBRERÍA OCTONODE
 /*var client = github.client({
-  username: usuario,
-  password: password
+username: usuario,
+password: password
 });
 
 client.get('/user', {}, function (err, status, body, headers) {
-  //console.log(body);
-  console.log("Id de usuario: "+body.id); //json object
+//console.log(body);
+console.log("Id de usuario: "+body.id); //json object
 });*/
