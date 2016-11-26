@@ -23,11 +23,13 @@ gulp.task('install-resource', function()
 
 // Despliegue en Heroku
 
-    gulp.task('push-heroku', function(){
+    gulp.task('pushheroku', function(){
     git()
         .push('heroku','master');
     });
   
+// deploy heroku
+
 //Deploy
 gulp.task('deploy', ['install-resource', 'push'], function()
 {
