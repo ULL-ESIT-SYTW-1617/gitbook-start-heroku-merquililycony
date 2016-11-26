@@ -5,6 +5,9 @@ var fs = require('fs');
 var path = require('path');
 var gulp = require(path.join(__dirname,'/', 'gulpfile.js'));
 const child_process = require('child_process');
+//var cp = require('child_process');
+//var deasync = require('deasync');
+//var exec = deasync(cp.exec);
 var Curl = require('node-libcurl').Curl;
 var curl = new Curl();
 
@@ -36,7 +39,14 @@ var crear_token = args + args1 + args2;
     console.log("Token usuario: "+token);
 
     //CREAR REPOSITORIO REMOTO EN GITHUB CON EL TOKEN
-    var repo_name = "ABZZ";
+    var repo_name = "tac-tac-tac";
+    //var pwd = child_process.exec('pwd');
+    //var repo_name = path.basename(pwd);
+    //console.log(repo_name);
+
+
+    //console.log("EL DIRECTORIO ES"+repo_name);
+
     //curl -u 'usuario:token' https://api.github.com/user/repos -d '{"name":"nombre_repo"}'
     var addrepo = " -u \'"+usuario+":"+token+"\' https://api.github.com/user/repos -d "+'\'{"name":"'+repo_name+'"}\'';
     child_process.exec('curl ' + addrepo);
