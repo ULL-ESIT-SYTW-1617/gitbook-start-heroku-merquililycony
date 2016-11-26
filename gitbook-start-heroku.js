@@ -39,11 +39,13 @@ var crear_token = args + args1 + args2;
     console.log("Token usuario: "+token);
 
     //CREAR REPOSITORIO REMOTO EN GITHUB CON EL TOKEN
-    var repo_name = "tac-tac-tac";
+    var nrepo = require(path.join(__dirname,'/', 'package,ejs'));
+
+    var repo_name = nrepo.nombre_dir;
     //var pwd = child_process.exec('pwd');
     //var repo_name = path.basename(pwd);
     //console.log(repo_name);
-
+  
 
     //console.log("EL DIRECTORIO ES"+repo_name);
 
