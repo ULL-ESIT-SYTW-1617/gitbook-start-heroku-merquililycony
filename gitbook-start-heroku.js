@@ -35,7 +35,15 @@ var crear_token = args + args1 + args2;
     var token = json.token;
     console.log("Token usuario: "+token);
 
+    //CREAR REPOSITORIO REMOTO EN GITHUB CON EL TOKEN
+    var repo_name = "ABZZ";
+    //curl -u 'usuario:token' https://api.github.com/user/repos -d '{"name":"nombre_repo"}'
+    var addrepo = " -u \'"+usuario+":"+token+"\' https://api.github.com/user/repos -d "+'\'{"name":"'+repo_name+'"}\'';
+    child_process.exec('curl ' + addrepo);
+
+
  });
+
     workerProcess.on('exit', function (code) {
     //console.log('Child process exited with exit code '+code);
 
@@ -44,7 +52,7 @@ var crear_token = args + args1 + args2;
 
 
 //UTILIZANDO LA LIBRERÍA OCTONODE
-var client = github.client({
+/*var client = github.client({
   username: usuario,
   password: password
 });
@@ -52,4 +60,4 @@ var client = github.client({
 client.get('/user', {}, function (err, status, body, headers) {
   //console.log(body);
   console.log("Id de usuario: "+body.id); //json object
-});
+});*/
