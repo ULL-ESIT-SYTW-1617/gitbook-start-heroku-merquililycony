@@ -32,7 +32,7 @@ var crear_token = args + args1 + args2;
   //  console.log('stderr: ' + stderr);
     //COGER TOKEN
     var json = JSON.parse(fs.readFileSync(usuario+'.json','utf8'))
-    var token = json.token;    
+    var token = json.token;
     console.log("Token usuario: "+token);
 
  });
@@ -43,12 +43,13 @@ var crear_token = args + args1 + args2;
 
 
 
-//OBTENER DATOS PÚBLICOS DE UN USUARIO DE GITHUB
-client.get('/users/'+usuario, {}, function (err, status, body, headers) {
+//UTILIZANDO LA LIBRERÍA OCTONODE
+var client = github.client({
+  username: usuario,
+  password: password
+});
 
-var ghuser = client.user(usuario); //Datos públicos del usuario
-//console.log(body);
-var id_ = body.id;
-console.log("Id usuario "+id_);
-
+client.get('/user', {}, function (err, status, body, headers) {
+  //console.log(body);
+  console.log("Id de usuario: "+body.id); //json object
 });
