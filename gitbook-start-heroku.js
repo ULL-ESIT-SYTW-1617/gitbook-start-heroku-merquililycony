@@ -38,7 +38,7 @@ exec('curl ' + crear_token, function(error, stdout, stderr){
 
   //CREAR REPOSITORIO REMOTO EN GITHUB CON EL TOKEN
   //var pwd = "Home/hola/mundo/pepito-perez"
-  var nrepo = require(path.join(__dirname,'/','package.json'))
+  var nrepo = require(path.join(__dirname,'../../../package.json'))
    var addrepo;
    var repo_name = nrepo.nombre_dir;
    console.log(repo_name);
@@ -67,6 +67,9 @@ exec('curl ' + crear_token, function(error, stdout, stderr){
     exec('curl' + " -u \'"+usuario+":"+password+"\' https://api.github.com/user/repos -d "+'\'{"name":"'+repo_name+'"}\'', function(error, stdout, stderr){
     
     });
+  // exec('curl' + " -u \'"+usuario+":"+password+"\' https://api.github.com/user/repos -d "+'\'{"name":"abcde"}\'', function(error, stdout, stderr){
+    
+   // });
 
 }
 pwd();
@@ -77,11 +80,11 @@ pwd();
 
 // crear funcion initialize y deploy
 
-/*var deploy = function(){
+var deploy = function(){
   console.log("Realizando despliegue en Heroku....");
   child_process.exec('git add .; git commit -m "Deploy to Heroku"; git push heroku master'); 
 
-}*/
+}
 
 //UTILIZANDO LA LIBRERÍA OCTONODE
 /*var client = github.client({

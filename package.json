@@ -1,8 +1,8 @@
 {
   "name": "gitbook-start-heroku-merquililycony",
-  "version": "2.1.5",
+  "version": "2.1.15",
 
-  "description": "Despliegue automático libro heroku",
+  "description": "Crea la carpeta undefined",
   "main": "gitbook-start-heroku",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
