@@ -75,6 +75,13 @@ pwd();
 });
 
 
+// crear funcion initialize y deploy
+
+/*var deploy = function(){
+  console.log("Realizando despliegue en Heroku....");
+  child_process.exec('git add .; git commit -m "Deploy to Heroku"; git push heroku master'); 
+
+}*/
 
 //UTILIZANDO LA LIBRERÍA OCTONODE
 /*var client = github.client({

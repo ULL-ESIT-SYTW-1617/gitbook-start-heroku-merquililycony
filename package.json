@@ -1,6 +1,6 @@
 {
   "name": "gitbook-start-heroku-merquililycony",
-  "version": "2.1.4",
+  "version": "2.1.5",
 
   "description": "Despliegue automático libro heroku",
   "main": "gitbook-start-heroku",
