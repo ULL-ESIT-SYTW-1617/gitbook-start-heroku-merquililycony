@@ -27,8 +27,6 @@ var token = json.token;
 
 //CREAR REPOSITORIO REMOTO EN GITHUB CON EL TOKEN
 var pwd = function(pwd, callback){
-  console.log("La ruta es: "+pwd);
-
   var repo_name = path.basename(exec(pwd)); //Obtiene el directorio actual
   repo_name = repo_name.split("\n").join("");//Elimina salto de carro de directorio actual
   callback(repo_name);
