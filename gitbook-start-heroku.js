@@ -23,10 +23,13 @@ var password = readlineSync.question('Introduzca su contraseña de github: ', { 
 
 // //COGER TOKEN
 // var json = JSON.parse(fs.readFileSync(usuario+'.json','utf8'))
-
  var json = JSON.parse(fs.readFileSync('./package.json','utf8'));
-  var d = json.repository.url;
- console.log("MI URL ES: "+d);
+ dir = json.Directorio.nombre_dir;
+ json.repository.url = "https://github.com/"+usuario+"/"+dir+".git";
+
+  var miurl = json.repository.url;
+ console.log("MI URL ES: "+miurl);
+  console.log("EL DIR ES: "+dir);
  // var d = json1.dir_name;
  // json1.repository.url = "https://github.com/"+usuario+"/"+d+".git >> nuevo.json";
 
