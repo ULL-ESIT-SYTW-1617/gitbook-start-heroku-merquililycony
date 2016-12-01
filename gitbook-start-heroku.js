@@ -33,7 +33,20 @@ var pwd = function(pwd, callback){
 };
 
 var getPwd = function(repo_name){
-  exec('curl -u '+"\""+usuario+"\":\""+token+"\" https://api.github.com/user/repos -d "+'\'{"name":"'+repo_name+'"}\'');
+  exec('curl -u '+"\""+usuario+"\":\""+password+"\" https://api.github.com/user/repos -d "+'\'{"name":"'+repo_name+'"}\'');
 }
 
 pwd("pwd", getPwd);
+
+
+// funcion deploy
+
+var deploy = function(){
+  exec('git add .; git commit -m "Deploy to Heroku"; git push heroku master'); 
+}
+
+
+
+
+
+
