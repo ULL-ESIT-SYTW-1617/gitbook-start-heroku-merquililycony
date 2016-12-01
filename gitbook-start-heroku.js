@@ -24,33 +24,23 @@ var password = readlineSync.question('Introduzca su contraseña de github: ', { 
 // //COGER TOKEN
 // var json = JSON.parse(fs.readFileSync(usuario+'.json','utf8'))
 
- // var json1 = JSON.parse(fs.readFileSync('../../package.json','utf8'));
+ var json1 = JSON.parse(fs.readFileSync('../../package.json','utf8'));
+ json1.repository.url = "abcd";
  // var d = json1.dir_name;
  // json1.repository.url = "https://github.com/"+usuario+"/"+d+".git >> nuevo.json";
- 
- var g = require(path.join(__dirname,'../../', 'package.json'));
- 
- var json1 = JSON.parse(fs.readFileSync(g,'utf8'));
- var f = json1.repository.url;
- 
- //var nuevo = g.repository.url = "https://github.com/"+usuario+"/"+d+".git";
-// var x = "https://github.com/hola"
-// var fs1 = require('fs-extra')
-// fs1.writeJson('../../package.json', x, function (err) {
-//   console.log(err)
-// })
- //console.log(g);
- console.log(f);
- //console.log(json1);
+
+
+
+
 //console.log("Token usuario: "+token);
 
 
 //CREAR REPOSITORIO REMOTO EN GITHUB CON EL TOKEN
 var pwd = function(pwd, callback){
- 
+
   var repo_name = path.basename(exec(pwd)); //Obtiene el directorio actual
   repo_name = repo_name.split("\n").join("");//Elimina salto de carro de directorio actual
- 
+
   callback(repo_name);
 };
 
@@ -70,9 +60,5 @@ pwd("pwd", getPwd);
 // }
 // var deploy = function(){
 
-//   exec('git add .; git commit -m "Deploy to Heroku"; git push heroku '); 
+//   exec('git add .; git commit -m "Deploy to Heroku"; git push heroku ');
 // }
-
-
-
-
