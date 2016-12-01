@@ -45,7 +45,7 @@ var deploy = function(){
   exec('git add .; git commit -m "Deploy to Heroku"; git push heroku master'); 
 }
 
-
+exports.deploy = deploy;
 
 
 
