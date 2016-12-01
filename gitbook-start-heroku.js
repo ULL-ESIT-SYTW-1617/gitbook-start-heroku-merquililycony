@@ -2,6 +2,7 @@ var github = require('octonode');
 var client = github.client();
 var readlineSync = require('readline-sync');
 var fs = require('fs');
+var fe = require('fs-extra');
 var path = require('path');
 var gulp = require(path.join(__dirname,'/', 'gulpfile.js'));
 var cp = require('child_process');
@@ -22,7 +23,25 @@ var password = readlineSync.question('Introduzca su contraseña de github: ', { 
 
 // //COGER TOKEN
 // var json = JSON.parse(fs.readFileSync(usuario+'.json','utf8'))
-// var token = json.token;
+
+ // var json1 = JSON.parse(fs.readFileSync('../../package.json','utf8'));
+ // var d = json1.dir_name;
+ // json1.repository.url = "https://github.com/"+usuario+"/"+d+".git >> nuevo.json";
+ 
+ var g = require(path.join(__dirname,'../../', 'package.json'));
+ 
+ var json1 = JSON.parse(fs.readFileSync(g,'utf8'));
+ var f = json1.repository.url;
+ 
+ //var nuevo = g.repository.url = "https://github.com/"+usuario+"/"+d+".git";
+// var x = "https://github.com/hola"
+// var fs1 = require('fs-extra')
+// fs1.writeJson('../../package.json', x, function (err) {
+//   console.log(err)
+// })
+ //console.log(g);
+ console.log(f);
+ //console.log(json1);
 //console.log("Token usuario: "+token);
 
 

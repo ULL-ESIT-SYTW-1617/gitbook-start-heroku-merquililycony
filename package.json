@@ -1,6 +1,6 @@
 {
   "name": "gitbook-start-heroku-merquililycony",
-  "version": "2.2.8",
+  "version": "2.2.14",
   "description": "Crea la carpeta undefined",
   "main": "gitbook-start-heroku",
   "scripts": {
@@ -49,6 +49,7 @@
     "octonode": "^0.7.6",
     "path": "^0.12.7",
     "readline-sync": "^1.4.5",
+    "replace": "^0.3.0",
     "simple-git": "^1.59.0"
   }
 }
