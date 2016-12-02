@@ -24,16 +24,9 @@ var password = readlineSync.question('Introduzca su contraseña de github: ', { 
 // //COGER TOKEN
 // var json = JSON.parse(fs.readFileSync(usuario+'.json','utf8'))
  var json = JSON.parse(fs.readFileSync('./package.json','utf8'));
- dir = json.Directorio.nombre_dir;
- json.repository.url = "https://github.com/"+usuario+"/"+dir+".git";
-
-  var miurl = json.repository.url;
- console.log("MI URL ES: "+miurl);
-  console.log("EL DIR ES: "+dir);
- // var d = json1.dir_name;
- // json1.repository.url = "https://github.com/"+usuario+"/"+d+".git >> nuevo.json";
-
-
+ //json -I -f package.json -e 'this.repository.url="bebe"'
+dir = json.Directorio.nombre_dir;
+exec('json -I -f package.json -e \'this.repository.url=\"'+"https://github.com/"+usuario+"/"+dir+".git"+'\"\'');//URL REMOTA
 
 
 //console.log("Token usuario: "+token);
@@ -66,3 +59,4 @@ pwd("pwd", getPwd);
 
 //   exec('git add .; git commit -m "Deploy to Heroku"; git push heroku ');
 // }
+
