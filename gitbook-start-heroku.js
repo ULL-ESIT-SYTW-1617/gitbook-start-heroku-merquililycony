@@ -26,7 +26,7 @@ var password = readlineSync.question('Introduzca su contraseña de github: ', { 
  var json = JSON.parse(fs.readFileSync('./package.json','utf8'));
  //json -I -f package.json -e 'this.repository.url="bebe"'
 dir = json.Directorio.nombre_dir;
-exec('json -I -f package.json -e \'this.repository.url=\"'+"git+https://github.com/"+usuario+"/"+dir+".git"+'\"\'');//URL REMOTA
+exec('json -I -f package.json -e \'this.repository.url=\"'+"https://github.com/"+usuario+"/"+dir+".git"+'\"\'');//URL REMOTA
 
 //console.log("Token usuario: "+token);
 
