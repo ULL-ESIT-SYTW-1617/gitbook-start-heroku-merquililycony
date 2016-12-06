@@ -69,7 +69,7 @@ $ heroku login
 ```bash
 $ heroku create
 ```
-* ![imagen](./createapp.png)
+ ![imagen](./createapp.png)
 11- Añadimos el remoto
 
 ```bash
