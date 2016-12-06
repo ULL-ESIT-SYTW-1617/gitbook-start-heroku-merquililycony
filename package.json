@@ -1,7 +1,7 @@
 {
   "name": "gitbook-start-heroku-merquililycony",
-  "version": "2.3.3",
-  "description": "Crea la carpeta undefined",
+  "version": "2.3.4",
+  "description": "",
   "main": "gitbook-start-heroku",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
