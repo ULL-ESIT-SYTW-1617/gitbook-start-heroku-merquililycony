@@ -71,7 +71,8 @@ $ heroku create
 ```
  ![imagen](./createapp.png)
  
- Copiamos lo que esta en el recuadro rojo y lo pegamos en el comando más abajo donde pone <nombre_app>
+ Copiamos lo que esta en el recuadro rojo y lo pegamos en el comando más abajo donde pone "nombre_app"
+
 11- Añadimos el remoto
 
 ```bash
