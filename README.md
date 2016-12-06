@@ -71,6 +71,7 @@ $ heroku create
 ```
  ![imagen](./createapp.png)
  
+ Copiamos lo que esta en el recuadro rojo y lo pegamos en el comando más abajo donde pone <nombre_app>
 11- Añadimos el remoto
 
 ```bash
@@ -90,11 +91,8 @@ $ gulp deploy-heroku
  **Repositorio GitHuB donde se realizó la práctica**
  * [Repo nueva funcionalidad](https://github.com/ULL-ESIT-SYTW-1617/nueva-funcionalidad-para-el-paquete-npm-plugins-merquililycony/)
  * [Repo paquete](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-heroku-merquililycony)
-
- **Enlace a Gh-pages**
-
- * [gh-pages](https://ull-esit-sytw-1617.github.io/nueva-funcionalidad-para-el-paquete-npm-plugins-merquililycony/)
-
+ 
+**Enlace a npm**
  * [npm](https://www.npmjs.com/package/gitbook-start-heroku-merquililycony)
 
  **Página de los autores**
